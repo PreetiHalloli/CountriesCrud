@@ -1,0 +1,16 @@
+<form  [formGroup]="countryForm">
+        Name:<br>
+        <input type="text" formControlName="name" >
+        <br>
+        Language:<br>
+        <input type="text" formControlName="language" >
+        <br>
+        Population:<br>
+        <input type="text" formControlName="population" >
+        <br>
+        Area:<br>
+        <input type="text" formControlName="area" >
+        <br><br>
+        <button (click)=updateCountry()>Add</button>
+ </form> 
+    

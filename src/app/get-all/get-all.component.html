@@ -1,0 +1,28 @@
+<table>
+    <tr>
+      <th>Name</th>
+      <th>Language</th>
+      <th>Population</th>
+      <th>Area</th>
+    </tr>
+    <tr *ngFor="let country of countries">
+      <td><a [routerLink]="country.id">{{country.name}}</a></td>
+      <td>{{country.language}}</td>
+      <td>{{country.population}}</td>
+      <td>{{country.area}}</td>
+      <button type="button" (click)=delete(country.id)>Delete</button>&nbsp;
+      <button type="button"><a [routerLink]="[country.id, 'edit']">Edit</a></button>
+    </tr>
+</table>
+
+<button [routerLink]="'/add'">Add</button>
+
+
+<!-- left hand side should be always in []
+right hand side always write in "" -->
+<!-- below line provides the want id 
+<button [routerLink]="'add'">Add</button> -->
+
+
+<!-- router link 
+[routerLink]="'/details'" -- it append the given in existing url -->
